@@ -1,0 +1,63 @@
+Game of mahjong:
+
+-init
+assign winds
+draw 13
+
+
+------
+React clients:
+player tiles
+all players discard (maybe only last tiles?)
+
+able to reorganise tiles and space them
+highlight trios
+
+pon, chow
+
+
+
+Api:
+websockets
+client mesages include (request -> response)
+  game id
+  command
+    discard
+    pon, chow...
+    
+  
+  
+server mesages includes
+  command
+    discard
+    pon, chow...
+    game end
+    newTile
+  
+
+events:
+new
+control
+
+
+
+
+when user visits /game,
+c: check session storage for name
+c: connect to game
+s: check if name -> query name
+s: connect and do rest
+
+
+
+Game logic
+  manage games  (id)
+  manage drawpile (wall)
+  pon, chow
+  count points/declare winner
+
+
+UI
+Chat (left panel)
+you at the bottom, others lined up at the top
+controls pon chow(right panel) 
